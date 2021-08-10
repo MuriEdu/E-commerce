@@ -1,4 +1,5 @@
-import LoginScreen from "./components/LoginScreen";
+import React from "react";
+import LoginScreen from "./pages/LoginPage/LoginScreen";
 
 function App() {
   return (

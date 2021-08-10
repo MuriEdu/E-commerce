@@ -11,7 +11,7 @@ export const SloganLogin = styled.p`
     font-size: 65px;
     text-align: center;
 `
-export const LoginBox = styled.form`
+export const LoginBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,25 +24,29 @@ export const LoginBox = styled.form`
 `
 
 export const FormInput = styled.input`
-    position: absolute;
     width: 550px;
     height: 58px;
     border-radius: 25px;
     text-align: center;
     font-size: 25px;
     border: black;
-    
+    margin-bottom: 30px;    
     ::placeholder,
     ::-webkit-input-placeholder{
         color: #C9C6C6;
     }
+    `
+    export const DivInput = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #E7D9FF;
     `
 
     export const LoginButton = styled.button`
         width: 400px;
         height: 77.67px;
         border-radius: 50px;
-        margin-top: 220px;
         background-color: #5816B7;
         font-size: 28px;
         color: white;
@@ -67,4 +71,14 @@ export const FormInput = styled.input`
         width: 250px;
         height: 110px;
         margin-top: 22px;
+    `
+
+    export const EyeButton = styled.button`
+        position: absolute;
+        width: 50px;
+        top: 680px;
+        right: 485px;
+        background-color: white;
+        border: none;
+        border-radius: 25px;
     `
