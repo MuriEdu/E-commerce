@@ -1,0 +1,32 @@
+
+.top-menu {
+    background-color: #5816B7;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.navigator {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.link-menu {
+    color: #fff;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: 'Signika', sans-serif;
+    font-size: 25px;    
+}
+
+.button-menu {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.button-menu:hover {
+    background-color: #182D54;
+}

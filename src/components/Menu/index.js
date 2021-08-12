@@ -1,18 +1,26 @@
 import React from 'react';
-import { BtnMenu, TopMenu, styleLink } from './styles';
 import { Link } from 'react-router-dom';
+import './styles.css'
 
 function Menu() {
 
     return(
-        <TopMenu>
-                <BtnMenu>
-                    <Link to='/login' style={styleLink}>LOGIN</Link>
-                </BtnMenu>
-                <BtnMenu>
-                    <Link to='/' style={styleLink}>HOME</Link>
-                </BtnMenu>
-        </TopMenu>
+        <div className="top-menu">
+            <div className="navigator">
+                <div className="button-menu">
+                    <Link to='/' className="link-menu" >Home</Link>
+                    <div className="on-page"></div>
+                </div>
+                <div className="button-menu">
+                    <Link to='/' className="link-menu" >Produtos</Link>
+                    <div className="on-page"></div>
+                </div>
+                <div className="button-menu">
+                    <Link to='/login' className="link-menu" >Login</Link>
+                    <div className="on-page"></div>
+                </div>    
+            </div>    
+        </div>
     );
 
 }
