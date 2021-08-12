@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import { SloganLogin, TopMenu, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./stylesLogin";
-import Logo from './assets/logo.png'
+import { SloganLogin, TopMenu, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
+import Logo from '../assets/logo.png'
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 
 function LoginScreen (){

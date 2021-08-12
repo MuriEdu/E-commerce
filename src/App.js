@@ -1,9 +1,9 @@
 import React from "react";
-import LoginScreen from "./pages/LoginPage/LoginScreen";
+import Routes from "./routes/routes";
 
 function App() {
   return (
-    <LoginScreen/>
+    <Routes/>
   );
 }
 
