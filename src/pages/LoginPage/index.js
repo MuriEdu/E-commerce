@@ -13,7 +13,7 @@ function LoginScreen (){
 
     return(
         <div style={{backgroundColor: "#F7F7F7", }}>
-            <Menu></Menu>
+            <Menu page={'login'}/>
             <LogoSty src={Logo} alt='logo'/>
             <SloganLogin>Faça parte da cultura <b>sneakerhead</b> </SloganLogin>
             <LoginBox>

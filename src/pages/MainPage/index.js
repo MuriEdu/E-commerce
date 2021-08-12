@@ -5,7 +5,7 @@ function Main() {
 
     return(
         <div>
-            <Menu/>
+            <Menu page={'main'}/>
             <h1>MAIN PAGE</h1>
         </div>
     );

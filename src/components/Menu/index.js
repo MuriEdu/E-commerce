@@ -1,23 +1,28 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css'
 
-function Menu() {
+function Menu({page}) {
 
+    const getClass = (btn) => {
+        if (page === btn) {
+            return "on-page";
+        }
+        else{
+            return "button-menu"
+        }
+    }
+    
     return(
         <div className="top-menu">
             <div className="navigator">
-                <div className="button-menu">
+                <div className={getClass('main')}>
                     <Link to='/' className="link-menu" >Home</Link>
-                    <div className="on-page"></div>
                 </div>
-                <div className="button-menu">
+                <div className={getClass('produtos')}>
                     <Link to='/' className="link-menu" >Produtos</Link>
-                    <div className="on-page"></div>
                 </div>
-                <div className="button-menu">
+                <div className={getClass('login')}>
                     <Link to='/login' className="link-menu" >Login</Link>
-                    <div className="on-page"></div>
                 </div>    
             </div>    
         </div>
