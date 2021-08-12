@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Main from '../pages/MainPage'
 import LoginPage from '../pages/LoginPage'
+import ProductsPage from '../pages/ProductsPage';
 
 function Routes() {
 
@@ -14,6 +15,9 @@ function Routes() {
                 </Route>
                 <Route  path='/login'>
                     <LoginPage/>
+                </Route>
+                <Route  path='/produtos'>
+                    <ProductsPage/>
                 </Route>
             </Switch>
         </BrowserRouter>

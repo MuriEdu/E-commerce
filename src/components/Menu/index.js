@@ -19,7 +19,7 @@ function Menu({page}) {
                     <Link to='/' className="link-menu" >Home</Link>
                 </div>
                 <div className={getClass('produtos')}>
-                    <Link to='/' className="link-menu" >Produtos</Link>
+                    <Link to='/produtos' className="link-menu" >Produtos</Link>
                 </div>
                 <div className={getClass('login')}>
                     <Link to='/login' className="link-menu" >Login</Link>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { SloganLogin, TopMenu, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
+import { SloganLogin, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
 import Logo from '../assets/logo.png'
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import Menu from '../../components/Menu';
