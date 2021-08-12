@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { SloganLogin, TopMenu, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
 import Logo from '../assets/logo.png'
 import { BsEyeSlash, BsEye } from "react-icons/bs";
+import Menu from '../../components/Menu';
 
 function LoginScreen (){
 
@@ -12,7 +13,7 @@ function LoginScreen (){
 
     return(
         <div style={{backgroundColor: "#F7F7F7", }}>
-            <TopMenu></TopMenu>
+            <Menu></Menu>
             <LogoSty src={Logo} alt='logo'/>
             <SloganLogin>Faça parte da cultura <b>sneakerhead</b> </SloganLogin>
             <LoginBox>

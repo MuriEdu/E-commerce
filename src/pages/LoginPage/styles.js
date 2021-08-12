@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 
-export const TopMenu = styled.div`
-    background-color: #5816B7;
-    flex: 1;
-    height: 60px;
-`
 export const SloganLogin = styled.p`
     color: #000000;
     font-size: 65px;
