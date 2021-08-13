@@ -1,12 +1,17 @@
 import React from 'react'
 import Menu from '../../components/Menu';
+import './styles.css'
 
 function ProductsPage () {
 
     return (
         <div>
-            <Menu page={'cadastro'}/>
-            <h2> register page </h2>
+            <div>
+                <Menu page={'cadastro'}/>
+            </div>
+            <div className="view">
+                <h3 className="slogan" >Junte-se a nós e nos ajude a levar a cultura <b>Sneakerhead</b> para todo o <b>Brasil</b></h3>
+            </div>
         </div>
     )
 
