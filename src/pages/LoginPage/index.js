@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-import { SloganLogin, BottonLinkForm, FormInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
+import { SloganLogin, BottonLinkForm, EmailInput, PasswordInput, LoginBox, LoginTxt, LoginButton, LogoSty, EyeButton, DivInput } from "./styles";
 import Logo from '../assets/logo.png'
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import Menu from '../../components/Menu';
@@ -19,32 +20,31 @@ function LoginScreen (){
             <LoginBox>
                 <LoginTxt><b>LOGIN</b></LoginTxt>
                 <DivInput>
-                    <FormInput
+                    <EmailInput
                         placeholder={'E-MAIL'}
                         type={'text'}
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    <FormInput
-                        placeholder={'SENHA'}
-                        type={showPassword ? 'text' : 'password'}
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                    />
+                    <div>
+                        <PasswordInput
+                            placeholder={'SENHA'}
+                            type={showPassword ? 'text' : 'password'}
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
+                        <EyeButton onClick={() => setShowPassword(!showPassword)} >
+                            { showPassword ? <BsEyeSlash size={20}/> : <BsEye size={20} /> }
+                        </EyeButton>
+                    </div>
                 </DivInput>
-                <EyeButton
-                    onClick={() => setShowPassword(!showPassword)}
-                >
-                    
-                     { showPassword ? <BsEyeSlash size={20}/> : <BsEye size={20} /> }
                 
-                </EyeButton>
                 <LoginButton
                     onClick={() => alert(`${email}, ${password}`)}
                 >ENTRAR</LoginButton>
             </LoginBox>
             <BottonLinkForm>
-                Ainda não tem cadastro? <br/> Clique <b>aqui</b> para se cadastrar
+                Ainda não tem cadastro? <br/> Clique <Link to='/cadastro' ><b>aqui</b></Link> para se cadastrar
             </BottonLinkForm>
         </div>
     )
