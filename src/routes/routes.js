@@ -5,6 +5,7 @@ import Main from '../pages/MainPage'
 import LoginPage from '../pages/LoginPage'
 import ProductsPage from '../pages/ProductsPage';
 import RegisterPage from '../pages/RegisterPage'
+import CartPage from '../pages/CartPage'
 
 function Routes() {
 
@@ -22,6 +23,9 @@ function Routes() {
                 </Route>
                 <Route  path='/cadastro'>
                     <RegisterPage/>
+                </Route>
+                <Route  path='/carrinho'>
+                    <CartPage/>
                 </Route>
             </Switch>
         </BrowserRouter>
