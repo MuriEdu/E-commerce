@@ -5,7 +5,7 @@ function Main() {
 
     return(
         <div>
-            <Menu page={'main'}/>
+            <Menu page={'carrinho'}/>
             <h3>CART PAGE</h3>
         </div>
     );

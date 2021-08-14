@@ -5,26 +5,32 @@ import { BiCartAlt } from "react-icons/bi";
 
 function Menu({page}) {
 
-    const getClass = (btn) => {
+    const getClass = (btn, btnClass) => {
+
         if (page === btn) {
-            return "on-page";
+            if (page === 'carrinho') {
+                return 'on-cart'
+            }
+            else { return 'on-page' }
         }
         else{
-            return "button-menu"
+            return btnClass
         }
     }
     
     return(
         <div className="top-menu">
-            <div className="navigator">
+            <div className={getClass('carrinho', 'cart-div')}>
                 <Link to='/carrinho'><BiCartAlt className='cart-icon' /></Link>
-                <div className={getClass('main')}>
+            </div>
+            <div className="navigator">
+                <div className={getClass('main', 'button-menu')}>
                     <Link to='/' className="link-menu" >Home</Link>
                 </div>
-                <div className={getClass('produtos')}>
+                <div className={getClass('produtos', 'button-menu')}>
                     <Link to='/produtos' className="link-menu" >Produtos</Link>
                 </div>
-                <div className={getClass('login')}>
+                <div className={getClass('login', 'button-menu')}>
                     <Link to='/login' className="link-menu" >Login</Link>
                 </div>    
             </div>    
