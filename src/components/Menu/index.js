@@ -34,11 +34,6 @@ function Menu({ page }) {
             Produtos
           </Link>
         </div>
-        <div className={getClass('login', 'button-menu')}>
-          <Link to="/login" className="link-menu">
-            Login
-          </Link>
-        </div>
       </div>
     </div>
   );
