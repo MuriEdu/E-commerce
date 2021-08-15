@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+
 .view {
   display: flex;
   flex-direction: column;
@@ -7,5 +9,70 @@
 .slogan {
   text-align: center;
   font-size: 50px;
+  font-family: 'Roboto';
   width: 75%;
+}
+
+.bold-slogan {
+  font-family: 'Roboto';
+  font-style: italic;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 60px;
+  background-color: #e7d9ff;
+  width: 708px;
+  height: 650px;
+}
+.box-text {
+  color: #5816b7;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+input {
+  width: 602px;
+  height: 68px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 43px;
+  font-size: 30px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #b8b8b8;
+}
+
+.form-submit {
+  width: 75%;
+  height: 10%;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  border: none;
+  background-color: #5816b7;
+  color: #fff;
+  font-size: 25px;
+}
+
+.form-submit:active {
+  background-color: #6a33b8;
+  width: 74%;
+  height: 9%;
+}
+
+.login-link {
+  color: #5816b7;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.submit-err {
+  color: red;
+  font-weight: 700;
+  font-style: italic;
 }
