@@ -6,7 +6,6 @@ import LoginPage from '../pages/LoginPage';
 import ProductsPage from '../pages/ProductsPage';
 import RegisterPage from '../pages/RegisterPage';
 import CartPage from '../pages/CartPage';
-import PerfilPage from '../pages/PerfilPage';
 
 function Routes() {
   return (
@@ -26,9 +25,6 @@ function Routes() {
         </Route>
         <Route path="/carrinho">
           <CartPage />
-        </Route>
-        <Route path="/perfil">
-          <PerfilPage />
         </Route>
       </Switch>
     </BrowserRouter>

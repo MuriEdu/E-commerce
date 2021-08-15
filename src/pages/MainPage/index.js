@@ -20,11 +20,13 @@ function Main() {
         </div>
       </div>
       <h2 className="title">Sneaker Cuture</h2>
-
-      <div className="products-button">
-        <p>Produtos</p>
-      </div>
-
+      <Link className="products-link" to="/produtos">
+        {
+          <div className="products-button">
+            <p>Produtos</p>
+          </div>
+        }
+      </Link>
       <img className="divider" src={divider} alt={'404'} />
       <h4 className="culture-title">Um pouco sobre a nossa cultura</h4>
       <div className="quote-div">
