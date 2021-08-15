@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+
+.top-view {
+  display: flex;
+  flex-direction: row;
+}
+
+.perfil-div {
+  display: flex;
+  align-items: center;
+  margin-left: 1050px;
+  margin-right: 2%;
+}
+
+.title {
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.products-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #5816b7;
+  width: 170px;
+  height: 90px;
+  border-radius: 15px;
+  font-size: 25px;
+}
+
+.products-button:hover {
+  background-color: #6a33b8;
+  width: 169px;
+  height: 89px;
+}
+
+.products-link {
+  text-decoration: none;
+}
+
+.divider {
+  margin-top: 55px;
+  width: 1441px;
+  height: 475px;
+}
+
+.culture-title {
+  margin-left: 72px;
+  align-self: start;
+  font-size: 70px;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+}
+
+.quote-div {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.culture-txt {
+  font-size: 35px;
+  font-family: 'Hind', sans-serif;
+  margin-left: 72px;
+  margin-right: 72px;
+}
+
+.quote {
+  background-color: #5816b7;
+  width: 40px;
+  height: 450px;
+  margin-left: 82px;
+}
