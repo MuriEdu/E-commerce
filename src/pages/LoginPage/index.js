@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import sendUser from '../../api';
 
 import {
   SloganLogin,
@@ -55,7 +56,7 @@ function LoginScreen() {
             </EyeButton>
           </div>
         </DivInput>
-        <LoginButton onClick={() => alert(`${email}, ${password}`)}>
+        <LoginButton onClick={() => sendUser(email, password)}>
           ENTRAR
         </LoginButton>
       </LoginBox>
