@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import sendUser from '../../api';
+import { sendUser } from '../../api';
 
 import {
   SloganLogin,

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function sendUser(email, password) {
+export const sendUser = (email, password) => {
   axios
     .post('http://localhost:3001/login', {
       email: email,
@@ -12,6 +12,19 @@ function sendUser(email, password) {
     .catch((err) => {
       console.log(err);
     });
-}
+};
 
-export default sendUser;
+export const registerUser = (name, email, password) => {
+  axios
+    .post('http://localhost:3001/register', {
+      name: name,
+      email: email,
+      password: password,
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

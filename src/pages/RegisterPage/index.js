@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Menu from '../../components/Menu';
+import { registerUser } from '../../api';
 import './styles.css';
 
 function ProductsPage() {
@@ -36,7 +37,7 @@ function ProductsPage() {
       return;
     } else {
       setNotRegister('');
-      alert('SUBMIT');
+      registerUser(name, email, password);
     }
   };
 
