@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { sendUser } from '../../api';
+import { loginUser } from '../../api';
 
 import {
   SloganLogin,
@@ -56,7 +56,7 @@ function LoginScreen() {
             </EyeButton>
           </div>
         </DivInput>
-        <LoginButton onClick={() => sendUser(email, password)}>
+        <LoginButton onClick={() => loginUser(email, password)}>
           ENTRAR
         </LoginButton>
       </LoginBox>
