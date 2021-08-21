@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
+import { IoLogInSharp } from 'react-icons/io5';
+
 function PerfilButton({ imagem }) {
   return (
-    <button className="perfil-button">
-      <Link className="perfil-link" to="/login">
-        <img className="perfil-img" src={imagem} alt={'404'} />
-      </Link>
-    </button>
+    <Link className="perfil-link" to="/login">
+      <IoLogInSharp className="login-icon" />
+    </Link>
   );
 }
 
