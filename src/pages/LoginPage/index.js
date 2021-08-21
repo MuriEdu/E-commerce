@@ -22,6 +22,11 @@ function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [user, setUser] = useState();
+
+  const getUser = () => {
+    console.log(loginUser(email, password));
+  };
 
   return (
     <div style={{ backgroundColor: '#F7F7F7' }}>
@@ -56,7 +61,13 @@ function LoginScreen() {
             </EyeButton>
           </div>
         </DivInput>
-        <LoginButton onClick={() => loginUser(email, password)}>
+        <LoginButton
+          onClick={() => {
+            loginUser(email, password).then((res) => {
+              setUser(res.data[0]);
+            });
+          }}
+        >
           ENTRAR
         </LoginButton>
       </LoginBox>

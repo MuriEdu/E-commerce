@@ -1,13 +1,16 @@
 import axios from 'axios';
 
 export const loginUser = (email, password) => {
-  axios
+  return axios
     .post('http://localhost:3001/login', {
       email: email,
       password: password,
     })
     .then((res) => {
-      alert(`usuário logado com sucesso, seja bem vindo "${res.data.name}"`);
+      return res;
+    })
+    .then((data) => {
+      return data;
     })
     .catch((err) => {
       alert(
