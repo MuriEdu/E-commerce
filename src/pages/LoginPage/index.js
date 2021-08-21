@@ -64,7 +64,12 @@ function LoginScreen() {
         <LoginButton
           onClick={() => {
             loginUser(email, password).then((res) => {
-              setUser(res.data[0]);
+              if (res.status !== 200) {
+                console.log(res);
+                return;
+              } else {
+                console.log(res);
+              }
             });
           }}
         >

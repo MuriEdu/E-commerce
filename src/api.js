@@ -13,9 +13,7 @@ export const loginUser = (email, password) => {
       return data;
     })
     .catch((err) => {
-      alert(
-        'Erro ao fazer login, Por favor verifique se você digitou email e senha corretamentes'
-      );
+      return { status: 404 };
     });
 };
 
