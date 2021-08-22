@@ -17,12 +17,13 @@ import {
 import Logo from '../assets/logo.png';
 import { BsEyeSlash, BsEye } from 'react-icons/bs';
 import Menu from '../../components/Menu';
+import getUser from '../../components/getUser/getUser';
 
 function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
 
   const redirectPerfil = () => {
     window.location.assign('http://localhost:3000/perfil');
@@ -66,9 +67,18 @@ function LoginScreen() {
             try {
               loginUser(email, password).then((res) => {
                 if (res.status !== 200) {
-                  setUser(null);
+                  const jsAuth = JSON.stringify(false);
+                  const jsData = JSON.stringify(null);
+
+                  localStorage.setItem('@EC-ISAUTH', jsAuth);
+                  localStorage.setItem('@EC-USER', jsData);
+                  console.log('Erro ao fazer login');
                 } else {
-                  setUser(res.data);
+                  const jsAuth = JSON.stringify(true);
+                  const jsData = JSON.stringify(res.data);
+
+                  localStorage.setItem('@EC-ISAUTH', jsAuth);
+                  localStorage.setItem('@EC-USER', jsData);
                   redirectPerfil();
                 }
               });
@@ -87,7 +97,13 @@ function LoginScreen() {
         </Link>{' '}
         para se cadastrar
       </BottonLinkForm>
-      <button onClick={() => {}}>LOG</button>
+      <button
+        onClick={() => {
+          console.log(getUser(null));
+        }}
+      >
+        LOG
+      </button>
     </div>
   );
 }
