@@ -24,8 +24,8 @@ function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);
   const [user, setUser] = useState();
 
-  const getUser = () => {
-    console.log(loginUser(email, password));
+  const redirectPerfil = () => {
+    window.location.assign('http://localhost:3000/perfil');
   };
 
   return (
@@ -63,14 +63,18 @@ function LoginScreen() {
         </DivInput>
         <LoginButton
           onClick={() => {
-            loginUser(email, password).then((res) => {
-              if (res.status !== 200) {
-                console.log(res);
-                return;
-              } else {
-                console.log(res);
-              }
-            });
+            try {
+              loginUser(email, password).then((res) => {
+                if (res.status !== 200) {
+                  setUser(null);
+                } else {
+                  setUser(res.data);
+                  redirectPerfil();
+                }
+              });
+            } catch (err) {
+              setUser({ status: 400 });
+            }
           }}
         >
           ENTRAR
@@ -83,6 +87,7 @@ function LoginScreen() {
         </Link>{' '}
         para se cadastrar
       </BottonLinkForm>
+      <button onClick={() => {}}>LOG</button>
     </div>
   );
 }
