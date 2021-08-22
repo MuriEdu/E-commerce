@@ -1,5 +1,4 @@
 import React from 'react';
-import getUser from '../../components/getUser/getUser';
 import Menu from '../../components/Menu';
 
 // window.location.assign('http://localhost:3000/login');
