@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+.user-name {
+  font-size: 35px;
+  margin-left: 48px;
+  font-family: 'Signika', sans-serif;
+  margin-bottom: 0px;
+}
+
+.logout {
+  background-color: #f7f7f7;
+  border: none;
+  font-size: 25px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 100;
+  margin-left: 48px;
+}
+
+.logout:hover {
+  color: rgb(128, 128, 128);
+}
