@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 import { BiCartAlt } from 'react-icons/bi';
+import { BsPersonFill } from 'react-icons/bs';
 
 function Menu({ page }) {
   const getClass = (btn, btnClass) => {
@@ -32,6 +33,11 @@ function Menu({ page }) {
         <div className={getClass('produtos', 'button-menu')}>
           <Link to="/produtos" className="link-menu">
             Produtos
+          </Link>
+        </div>
+        <div className={getClass('perfil', 'button-menu')}>
+          <Link to="/perfil" className="link-menu">
+            <BsPersonFill className="cart-icon" />
           </Link>
         </div>
       </div>
