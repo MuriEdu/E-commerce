@@ -3,6 +3,7 @@ import './styles.css';
 import Menu from '../../components/Menu';
 import { LogoSty } from '../LoginPage/styles';
 import Logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 // window.location.assign('http://localhost:3000/login');
 
@@ -25,6 +26,7 @@ function PerfilPage() {
   const userName = user[0].name;
 
   const haveAddress = false;
+  const haveRequest = false;
 
   const buttonAddAddres = () => {
     if (haveAddress === false) {
@@ -33,8 +35,24 @@ function PerfilPage() {
       return <div></div>;
     }
   };
-
   let adrassData = buttonAddAddres();
+
+  const getRequests = () => {
+    if (haveRequest === false) {
+      return (
+        <div className="requests-box">
+          <h2 className="no-request-title">Você ainda não tem nehum pedido</h2>
+          <Link className="link-products" to="/produtos">
+            Ver produtos
+          </Link>
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
+  };
+
+  let requestesData = getRequests();
 
   return (
     <div>
@@ -56,10 +74,13 @@ function PerfilPage() {
           >
             Sair
           </button>
-          <div className="divider"></div>
+          <div className="divider-perfil"></div>
           <div className="address">{adrassData}</div>
         </div>
-        <div className="right-container"></div>
+        <div className="right-container">
+          <h2 className="requests-title">Meus Pedidos</h2>
+          {requestesData}
+        </div>
       </div>
     </div>
   );

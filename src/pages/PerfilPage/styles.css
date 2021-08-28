@@ -10,6 +10,7 @@
 }
 
 .right-container {
+  margin-left: 71px;
 }
 
 .user-name {
@@ -32,7 +33,7 @@
   color: rgb(128, 128, 128);
 }
 
-.divider {
+.divider-perfil {
   height: 5px;
   width: 140px;
   margin-left: 40px;
@@ -57,4 +58,38 @@
 
 .add-address:active {
   color: #2c0a5c;
+}
+
+.requests-title {
+  font-family: 'Signika', sans-serif;
+  font-size: 55px;
+}
+
+.requests-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+  width: 180%;
+  background-color: #ebebeb;
+  border-radius: 15px;
+  padding: 25px;
+  padding-bottom: 30px;
+}
+
+.link-products {
+  color: #615f5f;
+  text-decoration: none;
+  font-family: 'Signika', sans-serif;
+}
+
+.link-products:hover {
+  color: #5816b7;
+}
+
+.no-request-title {
+  font-size: 35px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
+  color: #615f5f;
 }
