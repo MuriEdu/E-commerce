@@ -32,3 +32,29 @@
   color: rgb(128, 128, 128);
 }
 
+.divider {
+  height: 5px;
+  width: 140px;
+  margin-left: 40px;
+  margin-top: 23px;
+  background-color: #c4c4c4;
+}
+
+.add-address {
+  font-family: 'Signika', sans-serif;
+  width: max-content;
+  margin-top: 20px;
+  margin-left: 48px;
+  color: #615f5f;
+  background-color: #f7f7f7;
+  border: none;
+  font-size: 18px;
+}
+
+.add-address:hover {
+  color: #5816b7;
+}
+
+.add-address:active {
+  color: #2c0a5c;
+}
