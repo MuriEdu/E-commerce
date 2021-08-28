@@ -28,14 +28,14 @@ function PerfilPage() {
   const haveAddress = false;
   const haveRequest = false;
 
-  const buttonAddAddres = () => {
+  const buttonAddAddres = (address) => {
     if (haveAddress === false) {
       return <button className="add-address">+ Adicionar Endereço</button>;
     } else {
-      return <div></div>;
+      return <button className="add-address">{address}</button>;
     }
   };
-  let adrassData = buttonAddAddres();
+  let adrassData = buttonAddAddres('casa');
 
   const getRequests = () => {
     if (haveRequest === false) {

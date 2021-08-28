@@ -23,6 +23,14 @@ function LoginScreen() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
+  const JSisAuth = localStorage.getItem('@EC-ISAUTH');
+  const isAuth = JSON.parse(JSisAuth);
+
+  if (isAuth === true) {
+    window.location.assign('http://localhost:3000/perfil');
+    return;
+  }
+
   const redirectPerfil = () => {
     window.location.assign('http://localhost:3000/perfil');
   };
