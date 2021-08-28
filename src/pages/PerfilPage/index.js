@@ -24,24 +24,43 @@ function PerfilPage() {
 
   const userName = user[0].name;
 
+  const haveAddress = false;
+
+  const buttonAddAddres = () => {
+    if (haveAddress === false) {
+      return <button className="add-address">+ Adicionar Endereço</button>;
+    } else {
+      return <div></div>;
+    }
+  };
+
+  let adrassData = buttonAddAddres();
+
   return (
     <div>
       <Menu page={'perfil'} />
       <LogoSty src={Logo} alt="logo" />
-      <p className="user-name"> {userName.toUpperCase()} </p>
-      <button
-        className="logout"
-        onClick={() => {
-          const jsAuth = JSON.stringify(false);
-          const jsData = JSON.stringify(null);
+      <div className="container">
+        <div className="left-container">
+          <p className="user-name"> {userName.toUpperCase()} </p>
+          <button
+            className="logout"
+            onClick={() => {
+              const jsAuth = JSON.stringify(false);
+              const jsData = JSON.stringify(null);
 
-          localStorage.setItem('@EC-ISAUTH', jsAuth);
-          localStorage.setItem('@EC-USER', jsData);
-          window.location.reload();
-        }}
-      >
-        Sair
-      </button>
+              localStorage.setItem('@EC-ISAUTH', jsAuth);
+              localStorage.setItem('@EC-USER', jsData);
+              window.location.reload();
+            }}
+          >
+            Sair
+          </button>
+          <div className="divider"></div>
+          <div className="address">{adrassData}</div>
+        </div>
+        <div className="right-container"></div>
+      </div>
     </div>
   );
 }
