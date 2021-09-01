@@ -33,3 +33,10 @@ export const registerUser = (name, email, password) => {
       console.log(err);
     });
 };
+
+export const addAddress = (id, addAddress) => {
+  axios.post('http://localhost:3001/register', {
+    _id: id,
+    addressReq: addAddress,
+  });
+};

@@ -25,8 +25,8 @@ function PerfilPage() {
 
   const userName = user[0].name;
 
-  const haveAddress = false;
-  const haveRequest = false;
+  let haveAddress = false;
+  let haveRequest = false;
 
   const buttonAddAddres = (address) => {
     if (haveAddress === false) {
