@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import Menu from '../../components/Menu';
 import { LogoSty } from '../LoginPage/styles';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-
-// window.location.assign('http://localhost:3000/login');
 
 function PerfilPage() {
   const JSisAuth = localStorage.getItem('@EC-ISAUTH');
@@ -13,6 +11,10 @@ function PerfilPage() {
 
   const isAuth = JSON.parse(JSisAuth);
   const user = JSON.parse(JSuser);
+
+  const [addresValue, setAddressValue] = useState('');
+  const [isPopupVisible, setisPopupVisible] = useState(false);
+  const [haveAddress, setHaveAddres] = useState(false);
 
   if (isAuth === null) {
     window.location.assign('http://localhost:3000/login');
@@ -25,17 +27,34 @@ function PerfilPage() {
 
   const userName = user[0].name;
 
-  let haveAddress = false;
   let haveRequest = false;
 
   const buttonAddAddres = (address) => {
     if (haveAddress === false) {
-      return <button className="add-address">+ Adicionar Endereço</button>;
+      return (
+        <button
+          className="add-address"
+          onClick={() => {
+            setisPopupVisible(true);
+          }}
+        >
+          + Adicionar Endereço
+        </button>
+      );
     } else {
-      return <button className="add-address">{address}</button>;
+      return (
+        <button
+          className="add-address"
+          onClick={() => {
+            setisPopupVisible(true);
+          }}
+        >
+          {address}
+        </button>
+      );
     }
   };
-  let adrassData = buttonAddAddres('casa');
+  let adrassData = buttonAddAddres(addresValue);
 
   const getRequests = () => {
     if (haveRequest === false) {
@@ -78,6 +97,37 @@ function PerfilPage() {
           <div className="address">{adrassData}</div>
         </div>
         <div className="right-container">
+          {isPopupVisible ? (
+            <div className="form-address">
+              <button
+                className="close-form"
+                onClick={() => {
+                  setisPopupVisible(false);
+                }}
+              >
+                X
+              </button>
+              <input
+                className="form-input"
+                placeholder="Digite seu endereço"
+                value={addresValue}
+                onChange={(e) => {
+                  setAddressValue(e.target.value);
+                }}
+              />
+              <button
+                className="submit-form"
+                onClick={() => {
+                  if (addresValue.trim() !== '') {
+                    setHaveAddres(true);
+                    setisPopupVisible(false);
+                  }
+                }}
+              >
+                Enviar
+              </button>
+            </div>
+          ) : null}
           <h2 className="requests-title">Meus Pedidos</h2>
           {requestesData}
         </div>
